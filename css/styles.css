@@ -118,6 +118,16 @@ span.header-logo-second-word {
     color: var(--primary-text-color);
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
 
 
 /* ===============/COMPONENTS=========== */
@@ -329,6 +339,7 @@ span.header-logo-second-word {
 /* =================TEAM==================== */
 .team-section {
     background: #F4F4FD;
+    max-width: 100%;
 }
 
 .team {
@@ -469,6 +480,10 @@ span.footer-logo-second-word {
     margin-top: 16px;
 }
 
+.footer-social-media-wrapper {
+    margin-right: 80px;
+}
+
 .footer-title {
     font-family: 'Roboto';
     font-weight: 500;
@@ -504,6 +519,70 @@ span.footer-logo-second-word {
     background-color: #31D0AA;
 }
 
+.subscribe-title {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+}
+
+.subscribe-form {
+    display: flex;
+}
+
+.subscribe-form-input {
+    width: 264px;
+    height: 40px;
+    border: 1px solid #FFFFFF;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    background-color: transparent;
+    outline: none;
+    color: #FFFFFF;
+    border-radius: 4px;
+    padding: 8px 16px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscripe-form-input::placeholder {
+    color: #FFFFFF;
+}
+
+.subscribe-form-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 165px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    background: #4D5AE5;
+    border-radius: 4px;
+    color: #FFFFFF;
+    border-width: 0;
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+    padding: 8px 24px;
+    margin-left: 24px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-form-icon {
+    fill: #FFFFFF;
+    margin-left: 16px;
+}
+
+.subscribe-form-button:hover ,
+.subscribe-form-button:focus {
+    background-color: #404BBF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
 /* ===============MODAL WINDOW=========== */
 
 .backdrop {
@@ -530,6 +609,7 @@ span.footer-logo-second-word {
     transform: translate(-50%, -50%);
     width: 408px;
     height: 576px;
+    padding: 72px 24px 24px 24px;
     background: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -567,7 +647,158 @@ span.footer-logo-second-word {
     fill: #FFFFFF;
 }
 
+.modal-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--primary-text-color);
+    margin-bottom: 16px;
+    text-align: center;
+}
+
 /* ===============/MODAL-WINDOW========== */
+
+/* ===============MODAL-FORM============= */
+.modal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-form-field {
+    margin-bottom: 8px;
+}
+
+.modal-form-input-desc {
+    display: block;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+    color: #8E8F99;
+}
+
+.modal-form-input-wrapper {
+    position: relative;
+
+}
+
+.modal-form-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #8E8F99;
+    border-radius: 4px;
+    padding-left: 38px;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-input:focus {
+    outline: none;
+    border: 1px solid #4D5AE5;
+    border-radius: 4px;
+}
+
+.modal-form-input:focus + .modal-form-icon {
+    fill: #4D5AE5;
+}
+
+.modal-form-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translate(0,-50%);
+    display: flex;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    fill: var(--primary-text-color);
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-message {
+    width: 100%;
+    height: 100px;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    resize: none;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-message::placeholder {
+    color: rgba(46, 47, 66, 0.4);
+}
+
+.modal-form-message:focus {
+    outline: none;
+    border-color: #4D5AE5;
+}
+
+.modal-form-check-desc {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    line-height: 1.16px;
+    margin-right: 8px;
+    margin-bottom: 24px;
+}
+
+.modal-form-check-desc::before {
+    display: block;
+    height: 16px ;
+    width: 16px;
+    border: 1px solid #2E2F42;
+    border-radius: 2px;
+    cursor: pointer;
+    content: '';
+    margin-right: 8px;
+}
+
+.modal-form-check:checked + .modal-form-check-desc::before {
+    border: 1px solid #404BBF;
+    background-color: #404BBF;
+    background-image: url(/images/click.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.modal-form-check:checked + .modal-form-check-desc::before {
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-submit {
+    display: inline-block;
+    align-self: center;
+    padding: 16px 32px;
+    min-width: 169px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    background: #4D5AE5 ;
+    border-radius: 4px; 
+    color: #FFFFFF;
+    border-width: 0;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form-submit:hover ,
+.modal-form-submit:focus {
+    background-color: #404BBF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+}
+
+
+/* ===============/MODAL-FORM=========== */
+
+
 
 /* =============PORTFOLIO HERO=========== */
 
