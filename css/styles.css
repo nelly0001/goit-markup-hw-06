@@ -754,7 +754,7 @@ span.footer-logo-second-word {
 .modal-form-check:checked + .modal-form-check-desc::before {
     border: 1px solid #404BBF;
     background-color: #404BBF;
-    background-image: url(/images/click.svg);
+    background-image: url("../images/click.svg");
     background-repeat: no-repeat;
     background-position: center;
 }
