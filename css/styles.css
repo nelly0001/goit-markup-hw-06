@@ -236,7 +236,7 @@ span.header-logo-second-word {
     background: #2E2F42;
     padding-bottom: 188px;
     padding-top: 188px;
-    background-image: linear-gradient( rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7) ), url("../images/hero/bg.jpg");
+    background-image: linear-gradient( rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7) ), url('../images/hero/bg.jpg');
     background-size: cover;
     max-width: 1440px;
     background-color: #2E2F42;
@@ -754,7 +754,7 @@ span.footer-logo-second-word {
 .modal-form-check:checked + .modal-form-check-desc::before {
     border: 1px solid #404BBF;
     background-color: #404BBF;
-    background-image: url("../images/click.svg");
+    background-image: url('../images/click.svg');
     background-repeat: no-repeat;
     background-position: center;
 }
